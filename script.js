@@ -40,17 +40,6 @@ document.querySelectorAll('.service-card, .plan-card, .process-step-v2').forEach
     observer.observe(el);
 });
 
-// Contact form
-document.getElementById('contactForm').addEventListener('submit', (e) => {
-    e.preventDefault();
-    const formData = new FormData(e.target);
-    const data = Object.fromEntries(formData);
-
-    // Here you would send the data to your backend
-    alert('Gracias por tu mensaje, ' + data.nombre + '! Te contactaremos pronto.');
-    e.target.reset();
-});
-
 // Smooth scroll for anchor links
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
