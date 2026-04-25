@@ -26,6 +26,106 @@
     'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
     })(window,document,'script','dataLayer','GTM-MVCLF9C5');</script>
     <!-- End Google Tag Manager -->
+
+    <style>
+        /* Botón Agendar Navbar */
+        .btn-schedule {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            background: transparent;
+            border: 2px solid #6366f1;
+            color: #6366f1;
+            padding: 8px 16px;
+            border-radius: 8px;
+            font-weight: 600;
+            font-size: 0.875rem;
+            text-decoration: none;
+            transition: all 0.2s ease;
+            white-space: nowrap;
+        }
+        .btn-schedule:hover {
+            background: #6366f1;
+            color: #fff;
+            transform: translateY(-1px);
+            box-shadow: 0 4px 12px rgba(99,102,241,0.3);
+        }
+        .btn-schedule svg {
+            flex-shrink: 0;
+        }
+
+        /* Card de agendar en sección contacto */
+        .schedule-cta-box {
+            background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
+            border-radius: 20px;
+            padding: 2.5rem;
+            color: #fff;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 1.25rem;
+            box-shadow: 0 8px 32px rgba(99,102,241,0.35);
+        }
+        .schedule-cta-box h3 {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin: 0;
+            color: #fff;
+        }
+        .schedule-cta-box p {
+            margin: 0;
+            opacity: 0.9;
+            font-size: 1rem;
+            line-height: 1.6;
+        }
+        .schedule-cta-icon {
+            width: 56px;
+            height: 56px;
+            background: rgba(255,255,255,0.2);
+            border-radius: 14px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .btn-schedule-white {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: #fff;
+            color: #6366f1;
+            padding: 14px 28px;
+            border-radius: 10px;
+            font-weight: 700;
+            font-size: 1rem;
+            text-decoration: none;
+            transition: all 0.2s ease;
+            width: 100%;
+            justify-content: center;
+        }
+        .btn-schedule-white:hover {
+            background: #f1f5f9;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+        }
+
+        /* Grid contacto de 3 columnas cuando hay 2 cards */
+        .contact-grid-3 {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 2rem;
+            align-items: start;
+        }
+        @media (max-width: 1024px) {
+            .contact-grid-3 {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+        @media (max-width: 768px) {
+            .contact-grid-3 {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
 </head>
 <body>
     <!-- Google Tag Manager (noscript) -->
@@ -44,6 +144,13 @@
                 <li><a href="#servicios">Servicios</a></li>
                 <li><a href="#planes">Planes</a></li>
                 <li><a href="#proceso">Proceso</a></li>
+                <!-- NUEVO: Botón Agendar -->
+                <li>
+                    <a href="https://calendar.app.google/Led3S6xGT3TRJF4u6" target="_blank" rel="noopener" class="btn-schedule">
+                        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+                        Agendar Llamada
+                    </a>
+                </li>
                 <li><a href="#contacto" class="btn btn-nav">Contacto</a></li>
             </ul>
             <button class="menu-toggle" id="menuToggle" aria-label="Abrir menu">
@@ -234,14 +341,14 @@
                     <a href="#contacto" class="btn btn-plan">Comenzar Ahora</a>
                 </div>
 
-                <!-- Plan 3 -->
+                <!-- Plan 3 - PRECIO ACTUALIZADO -->
                 <div class="plan-card">
                     <div class="plan-header">
                         <span class="plan-name">E-Commerce</span>
                         <p class="plan-desc">Tienda online completa con pasarelas de pago integradas</p>
                         <div class="plan-price">
                             <span class="price-currency">$</span>
-                            <span class="price-amount">149.990</span>
+                            <span class="price-amount">199.990</span>
                         </div>
                         <span class="price-period">pago unico</span>
                     </div>
@@ -371,11 +478,11 @@
     <!-- Contacto -->
     <section class="section contact" id="contacto">
         <div class="container">
-            <div class="contact-grid">
+            <div class="contact-grid-3">
                 <div class="contact-info">
                     <span class="section-badge">Contacto</span>
                     <h2 class="section-title">Hablemos de<br><span class="gradient-text">tu proyecto</span></h2>
-                    <p>Escribenos y te responderemos en menos de 24 horas. Tambien puedes contactarnos directamente por WhatsApp.</p>
+                    <p>Escribenos y te responderemos en menos de 24 horas. Tambien puedes contactarnos directamente por WhatsApp o agendar una llamada.</p>
                     <div class="contact-methods">
                         <div class="contact-method">
                             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
@@ -391,6 +498,20 @@
                         </div>
                     </div>
                 </div>
+
+                <!-- NUEVO: Card Agendar Llamada -->
+                <div class="schedule-cta-box">
+                    <div class="schedule-cta-icon">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/><line x1="8" y1="14" x2="8" y2="14" stroke-width="3" stroke-linecap="round"/><line x1="12" y1="14" x2="12" y2="14" stroke-width="3" stroke-linecap="round"/><line x1="16" y1="14" x2="16" y2="14" stroke-width="3" stroke-linecap="round"/></svg>
+                    </div>
+                    <h3>Agenda una llamada gratis</h3>
+                    <p>Reserva 30 minutos con nuestro equipo y te asesoramos sin compromiso sobre tu proyecto web.</p>
+                    <a href="https://calendar.app.google/Led3S6xGT3TRJF4u6" target="_blank" rel="noopener" class="btn-schedule-white">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+                        Agendar Llamada Gratis
+                    </a>
+                </div>
+
                 <div class="contact-cta-box">
                     <div class="contact-cta-icon">
                         <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
