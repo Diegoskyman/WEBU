@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <html lang="es">
 <head>
     <!-- Google tag (gtag.js) -->
@@ -7,7 +8,6 @@
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
-    
       gtag('config', 'G-ZXF2X4TG82');
     </script>
     <meta charset="UTF-8">
@@ -27,558 +27,991 @@
     })(window,document,'script','dataLayer','GTM-MVCLF9C5');</script>
     <!-- End Google Tag Manager -->
 
-    <style>
-        /* Botón Agendar Navbar */
-        .btn-schedule {
-            display: inline-flex;
-            align-items: center;
-            gap: 6px;
-            background: transparent;
-            border: 2px solid #6366f1;
-            color: #6366f1;
-            padding: 8px 16px;
-            border-radius: 8px;
-            font-weight: 600;
-            font-size: 0.875rem;
-            text-decoration: none;
-            transition: all 0.2s ease;
-            white-space: nowrap;
-        }
-        .btn-schedule:hover {
-            background: #6366f1;
-            color: #fff;
-            transform: translateY(-1px);
-            box-shadow: 0 4px 12px rgba(99,102,241,0.3);
-        }
-        .btn-schedule svg {
-            flex-shrink: 0;
-        }
+```
+<style>
+    /* ── Botón Agendar Navbar ── */
+    .btn-schedule {
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+        background: transparent;
+        border: 2px solid #6366f1;
+        color: #6366f1;
+        padding: 8px 16px;
+        border-radius: 8px;
+        font-weight: 600;
+        font-size: 0.875rem;
+        text-decoration: none;
+        transition: all 0.2s ease;
+        white-space: nowrap;
+    }
+    .btn-schedule:hover {
+        background: #6366f1;
+        color: #fff;
+        transform: translateY(-1px);
+        box-shadow: 0 4px 12px rgba(99,102,241,0.3);
+    }
 
-        /* Card de agendar en sección contacto */
-        .schedule-cta-box {
-            background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
-            border-radius: 20px;
-            padding: 2.5rem;
-            color: #fff;
-            display: flex;
-            flex-direction: column;
-            align-items: flex-start;
-            gap: 1.25rem;
-            box-shadow: 0 8px 32px rgba(99,102,241,0.35);
-        }
-        .schedule-cta-box h3 {
-            font-size: 1.5rem;
-            font-weight: 700;
-            margin: 0;
-            color: #fff;
-        }
-        .schedule-cta-box p {
-            margin: 0;
-            opacity: 0.9;
-            font-size: 1rem;
-            line-height: 1.6;
-        }
-        .schedule-cta-icon {
-            width: 56px;
-            height: 56px;
-            background: rgba(255,255,255,0.2);
-            border-radius: 14px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-        .btn-schedule-white {
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            background: #fff;
-            color: #6366f1;
-            padding: 14px 28px;
-            border-radius: 10px;
-            font-weight: 700;
-            font-size: 1rem;
-            text-decoration: none;
-            transition: all 0.2s ease;
-            width: 100%;
-            justify-content: center;
-        }
-        .btn-schedule-white:hover {
-            background: #f1f5f9;
-            transform: translateY(-2px);
-            box-shadow: 0 6px 20px rgba(0,0,0,0.15);
-        }
+    /* ── Card agendar en sección contacto ── */
+    .schedule-cta-box {
+        background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
+        border-radius: 20px;
+        padding: 2.5rem;
+        color: #fff;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1.25rem;
+        box-shadow: 0 8px 32px rgba(99,102,241,0.35);
+    }
+    .schedule-cta-box h3 { font-size: 1.5rem; font-weight: 700; margin: 0; color: #fff; }
+    .schedule-cta-box p  { margin: 0; opacity: 0.9; font-size: 1rem; line-height: 1.6; }
+    .schedule-cta-icon {
+        width: 56px; height: 56px;
+        background: rgba(255,255,255,0.2);
+        border-radius: 14px;
+        display: flex; align-items: center; justify-content: center;
+    }
+    .btn-schedule-white {
+        display: inline-flex; align-items: center; gap: 8px;
+        background: #fff; color: #6366f1;
+        padding: 14px 28px; border-radius: 10px;
+        font-weight: 700; font-size: 1rem; text-decoration: none;
+        transition: all 0.2s ease; width: 100%; justify-content: center;
+    }
+    .btn-schedule-white:hover {
+        background: #f1f5f9; transform: translateY(-2px);
+        box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+    }
 
-        /* Grid contacto de 3 columnas cuando hay 2 cards */
-        .contact-grid-3 {
-            display: grid;
-            grid-template-columns: 1fr 1fr 1fr;
-            gap: 2rem;
-            align-items: start;
-        }
-        @media (max-width: 1024px) {
-            .contact-grid-3 {
-                grid-template-columns: 1fr 1fr;
-            }
-        }
-        @media (max-width: 768px) {
-            .contact-grid-3 {
-                grid-template-columns: 1fr;
-            }
-        }
-    </style>
+    /* ── Grid contacto 3 columnas ── */
+    .contact-grid-3 {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 2rem;
+        align-items: start;
+    }
+    @media (max-width: 1024px) { .contact-grid-3 { grid-template-columns: 1fr 1fr; } }
+    @media (max-width: 768px)  { .contact-grid-3 { grid-template-columns: 1fr; } }
+
+    /* ══════════════════════════════════════
+       PLANES — 2 columnas centradas
+    ══════════════════════════════════════ */
+    .plans-grid-2 {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 420px));
+        gap: 2rem;
+        justify-content: center;
+    }
+    @media (max-width: 900px) { .plans-grid-2 { grid-template-columns: 1fr; } }
+
+    /* Plan "Solución a Medida" — estilo especial */
+    .plan-custom {
+        background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+        border: 2px solid #334155;
+        color: #e2e8f0;
+        position: relative;
+        overflow: hidden;
+    }
+    .plan-custom::before {
+        content: '';
+        position: absolute;
+        top: -60px; right: -60px;
+        width: 200px; height: 200px;
+        background: radial-gradient(circle, rgba(99,102,241,0.15) 0%, transparent 70%);
+        pointer-events: none;
+    }
+    .plan-custom .plan-name   { color: #e2e8f0; }
+    .plan-custom .plan-desc   { color: #94a3b8; }
+    .plan-custom .plan-features li { color: #cbd5e1; }
+    .plan-custom .plan-badge-custom {
+        display: inline-block;
+        background: linear-gradient(90deg, #6366f1, #8b5cf6);
+        color: #fff;
+        font-size: 0.75rem;
+        font-weight: 700;
+        padding: 4px 14px;
+        border-radius: 999px;
+        letter-spacing: 0.05em;
+        text-transform: uppercase;
+        margin-bottom: 1rem;
+    }
+    .plan-price-custom {
+        font-size: 1.4rem;
+        font-weight: 700;
+        color: #6366f1;
+        margin: 1rem 0 0.25rem;
+        letter-spacing: -0.01em;
+    }
+    .plan-custom .check { stroke: #6366f1; }
+    .btn-whatsapp-plan {
+        display: flex; align-items: center; justify-content: center; gap: 10px;
+        background: #25d366;
+        color: #fff;
+        padding: 14px 28px;
+        border-radius: 12px;
+        font-weight: 700;
+        font-size: 1rem;
+        text-decoration: none;
+        transition: all 0.25s ease;
+        width: 100%;
+        margin-top: auto;
+    }
+    .btn-whatsapp-plan:hover {
+        background: #1ebe5d;
+        transform: translateY(-2px);
+        box-shadow: 0 6px 20px rgba(37,211,102,0.35);
+    }
+
+    /* ══════════════════════════════════════
+       CARRUSEL DE CLIENTES
+    ══════════════════════════════════════ */
+    .clients-section {
+        padding: 60px 0;
+        background: #f8fafc;
+        overflow: hidden;
+        border-top: 1px solid #e2e8f0;
+        border-bottom: 1px solid #e2e8f0;
+    }
+    .clients-label {
+        text-align: center;
+        font-size: 0.85rem;
+        font-weight: 600;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        color: #94a3b8;
+        margin-bottom: 2rem;
+    }
+    .carousel-track-wrapper {
+        overflow: hidden;
+        position: relative;
+        /* fade edges */
+        -webkit-mask-image: linear-gradient(to right, transparent 0%, black 10%, black 90%, transparent 100%);
+        mask-image: linear-gradient(to right, transparent 0%, black 10%, black 90%, transparent 100%);
+    }
+    .carousel-track {
+        display: flex;
+        gap: 2.5rem;
+        width: max-content;
+        animation: scroll-logos 30s linear infinite;
+    }
+    .carousel-track:hover { animation-play-state: paused; }
+    @keyframes scroll-logos {
+        0%   { transform: translateX(0); }
+        100% { transform: translateX(-50%); }
+    }
+    .client-logo-item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        text-decoration: none;
+        flex-shrink: 0;
+        transition: transform 0.2s ease;
+    }
+    .client-logo-item:hover { transform: translateY(-4px); }
+    .client-logo-box {
+        width: 160px;
+        height: 80px;
+        background: #fff;
+        border: 1px solid #e2e8f0;
+        border-radius: 14px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 16px 24px;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+        transition: box-shadow 0.2s ease, border-color 0.2s ease;
+        overflow: hidden;
+    }
+    .client-logo-item:hover .client-logo-box {
+        box-shadow: 0 6px 20px rgba(99,102,241,0.15);
+        border-color: #6366f1;
+    }
+    .client-logo-box img {
+        max-width: 100%;
+        max-height: 100%;
+        object-fit: contain;
+        filter: grayscale(100%);
+        opacity: 0.6;
+        transition: filter 0.2s ease, opacity 0.2s ease;
+    }
+    .client-logo-item:hover .client-logo-box img {
+        filter: grayscale(0%);
+        opacity: 1;
+    }
+    /* Placeholder cuando no hay logo */
+    .logo-placeholder {
+        font-size: 0.8rem;
+        font-weight: 700;
+        color: #64748b;
+        text-align: center;
+        letter-spacing: 0.02em;
+        line-height: 1.3;
+    }
+    .client-logo-name {
+        font-size: 0.72rem;
+        color: #94a3b8;
+        font-weight: 500;
+    }
+
+    /* ══════════════════════════════════════
+       NOTA HOSTING EN PLAN CARD
+    ══════════════════════════════════════ */
+    .plan-hosting-note {
+        display: flex;
+        align-items: flex-start;
+        gap: 8px;
+        background: #f8fafc;
+        border: 1px solid #e2e8f0;
+        border-radius: 10px;
+        padding: 12px 14px;
+        margin-top: 12px;
+        font-size: 0.8rem;
+        color: #64748b;
+        line-height: 1.5;
+    }
+    .plan-hosting-note svg {
+        flex-shrink: 0;
+        margin-top: 1px;
+        color: #6366f1;
+    }
+    .plan-hosting-note strong { color: #1e293b; }
+    .plan-hosting-note a {
+        color: #6366f1;
+        font-weight: 600;
+        text-decoration: none;
+    }
+    .plan-hosting-note a:hover { text-decoration: underline; }
+
+    /* ══════════════════════════════════════
+       SECCIÓN HOSTING INFO
+    ══════════════════════════════════════ */
+    .hosting-section {
+        background: #f8fafc;
+    }
+    .hosting-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1.5rem;
+        margin-top: 3rem;
+    }
+    @media (max-width: 1024px) { .hosting-grid { grid-template-columns: 1fr 1fr; } }
+    @media (max-width: 640px)  { .hosting-grid { grid-template-columns: 1fr; } }
+
+    .hosting-card {
+        background: #fff;
+        border-radius: 20px;
+        padding: 2rem;
+        border: 1px solid #e2e8f0;
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        box-shadow: 0 2px 12px rgba(0,0,0,0.04);
+    }
+    .hosting-card h3 {
+        font-size: 1.1rem;
+        font-weight: 700;
+        color: #0f172a;
+        margin: 0;
+        line-height: 1.4;
+    }
+    .hosting-card p {
+        font-size: 0.9rem;
+        color: #64748b;
+        margin: 0;
+        line-height: 1.6;
+    }
+    .hosting-card-icon {
+        width: 52px; height: 52px;
+        background: linear-gradient(135deg, #6366f1, #8b5cf6);
+        border-radius: 14px;
+        display: flex; align-items: center; justify-content: center;
+        color: #fff;
+        flex-shrink: 0;
+    }
+    .hosting-card-icon--alt {
+        background: linear-gradient(135deg, #f59e0b, #f97316);
+    }
+    .hosting-card-icon--green {
+        background: linear-gradient(135deg, #10b981, #059669);
+    }
+
+    /* Lista dentro de hosting cards */
+    .hosting-list {
+        list-style: none;
+        padding: 0; margin: 0;
+        display: flex; flex-direction: column; gap: 8px;
+    }
+    .hosting-list li {
+        display: flex; align-items: center; gap: 8px;
+        font-size: 0.875rem; color: #334155;
+    }
+
+    /* Opciones de precio hosting */
+    .hosting-pricing-options {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        flex-wrap: wrap;
+        margin-top: 0.5rem;
+    }
+    .hosting-option {
+        flex: 1;
+        min-width: 110px;
+        background: #f8fafc;
+        border: 1.5px solid #e2e8f0;
+        border-radius: 14px;
+        padding: 1rem;
+        display: flex; flex-direction: column; align-items: center; gap: 2px;
+        text-align: center;
+        position: relative;
+    }
+    .hosting-option--highlight {
+        border-color: #6366f1;
+        background: linear-gradient(135deg, #eef2ff, #f5f3ff);
+    }
+    .hosting-option-badge {
+        position: absolute;
+        top: -11px;
+        left: 50%; transform: translateX(-50%);
+        background: #6366f1;
+        color: #fff;
+        font-size: 0.65rem;
+        font-weight: 700;
+        padding: 3px 10px;
+        border-radius: 999px;
+        white-space: nowrap;
+    }
+    .hosting-option-label {
+        font-size: 0.75rem;
+        font-weight: 600;
+        color: #64748b;
+        text-transform: uppercase;
+        letter-spacing: 0.06em;
+    }
+    .hosting-option-price {
+        display: flex; align-items: flex-start; gap: 2px;
+    }
+    .h-currency {
+        font-size: 0.9rem; font-weight: 700; color: #0f172a; margin-top: 4px;
+    }
+    .h-amount {
+        font-size: 1.8rem; font-weight: 800; color: #0f172a; line-height: 1;
+    }
+    .hosting-option-period {
+        font-size: 0.7rem; color: #94a3b8; text-align: center;
+    }
+    .hosting-option-divider {
+        font-size: 0.85rem; font-weight: 700; color: #94a3b8;
+    }
+
+    /* Detalle cambios */
+    .hosting-changes-detail { margin-top: 0.5rem; }
+    .changes-title {
+        font-size: 0.82rem !important;
+        font-weight: 700 !important;
+        color: #334155 !important;
+        margin-bottom: 8px !important;
+    }
+    .changes-note {
+        font-size: 0.75rem !important;
+        color: #94a3b8 !important;
+        margin-top: 10px !important;
+        border-top: 1px solid #f1f5f9;
+        padding-top: 8px;
+    }
+
+    /* ══════════════════════════════════════
+       PROCESO — 4 pasos
+    ══════════════════════════════════════ */
+    /* hereda los estilos existentes de process-step-v2 */
+</style>
+```
+
 </head>
 <body>
     <!-- Google Tag Manager (noscript) -->
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MVCLF9C5"
     height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-    <!-- End Google Tag Manager (noscript) -->
-    <!-- Navbar -->
-    <nav class="navbar" id="navbar">
-        <div class="container nav-container">
-            <a href="#" class="logo">
-                <img src="ISOTIPO WEBU.png" alt="WEBU Isotipo" class="logo-isotipo">
-                <img src="LOGOTIPO WEBU.png" alt="WEBU" class="logo-text">
+
+```
+<!-- ══ NAVBAR ══ -->
+<nav class="navbar" id="navbar">
+    <div class="container nav-container">
+        <a href="#" class="logo">
+            <img src="ISOTIPO WEBU.png" alt="WEBU Isotipo" class="logo-isotipo">
+            <img src="LOGOTIPO WEBU.png" alt="WEBU" class="logo-text">
+        </a>
+        <ul class="nav-links" id="navLinks">
+            <li><a href="#inicio">Inicio</a></li>
+            <li><a href="#servicios">Servicios</a></li>
+            <li><a href="#planes">Planes</a></li>
+            <li><a href="#proceso">Proceso</a></li>
+            <li>
+                <a href="https://calendar.app.google/Led3S6xGT3TRJF4u6" target="_blank" rel="noopener" class="btn-schedule">
+                    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+                    Agendar Llamada
+                </a>
+            </li>
+            <li><a href="#contacto" class="btn btn-nav">Contacto</a></li>
+        </ul>
+        <button class="menu-toggle" id="menuToggle" aria-label="Abrir menu">
+            <span></span><span></span><span></span>
+        </button>
+    </div>
+</nav>
+
+<!-- ══ HERO ══ -->
+<section class="hero" id="inicio">
+    <div class="hero-bg-shapes">
+        <div class="shape shape-1"></div>
+        <div class="shape shape-2"></div>
+        <div class="shape shape-3"></div>
+    </div>
+    <div class="container hero-content">
+        <img src="ISOTIPO WEBU.png" alt="WEBU" class="hero-isotipo">
+        <span class="hero-badge">Desarrollo Web en Chile</span>
+        <h1>Tu presencia digital<br><span class="gradient-text">comienza hoy</span></h1>
+        <p class="hero-slogan">La forma facil de estar en internet</p>
+        <p class="hero-subtitle">Creamos sitios web profesionales, rapidos y optimizados para que tu negocio destaque en internet. Desde páginas web hasta soluciones digitales a medida.</p>
+        <div class="hero-actions">
+            <a href="#contacto" class="btn btn-primary btn-lg">Solicitar Propuesta Gratis</a>
+            <a href="#planes" class="btn btn-outline btn-lg">Ver Planes</a>
+        </div>
+        <div class="hero-stats">
+            <div class="stat">
+                <span class="stat-number">100+</span>
+                <span class="stat-label">Proyectos</span>
+            </div>
+            <div class="stat-divider"></div>
+            <div class="stat">
+                <span class="stat-number">98%</span>
+                <span class="stat-label">Satisfaccion</span>
+            </div>
+            <div class="stat-divider"></div>
+            <div class="stat">
+                <span class="stat-number">48 hrs</span>
+                <span class="stat-label">Entrega promedio</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ══ CARRUSEL DE CLIENTES ══ -->
+<section class="clients-section" id="clientes">
+    <div class="clients-label">Empresas que ya confían en nosotros</div>
+    <div class="carousel-track-wrapper">
+        <div class="carousel-track" id="carouselTrack">
+            <!-- Logos originales -->
+            <a href="https://mediacionya.cl" target="_blank" rel="noopener" class="client-logo-item">
+                <div class="client-logo-box">
+                    <!-- Reemplaza la línea de abajo con: <img src="logos/mediacionya.png" alt="Mediación Ya"> -->
+                    <span class="logo-placeholder">Mediación Ya</span>
+                </div>
             </a>
-            <ul class="nav-links" id="navLinks">
-                <li><a href="#inicio">Inicio</a></li>
-                <li><a href="#servicios">Servicios</a></li>
-                <li><a href="#planes">Planes</a></li>
-                <li><a href="#proceso">Proceso</a></li>
-                <!-- NUEVO: Botón Agendar -->
-                <li>
-                    <a href="https://calendar.app.google/Led3S6xGT3TRJF4u6" target="_blank" rel="noopener" class="btn-schedule">
-                        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
-                        Agendar Llamada
-                    </a>
-                </li>
-                <li><a href="#contacto" class="btn btn-nav">Contacto</a></li>
-            </ul>
-            <button class="menu-toggle" id="menuToggle" aria-label="Abrir menu">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
-        </div>
-    </nav>
+            <a href="https://constructoracumbreelsol.cl" target="_blank" rel="noopener" class="client-logo-item">
+                <div class="client-logo-box">
+                    <!-- <img src="logos/constructora-cumbre.png" alt="Constructora Cumbre El Sol"> -->
+                    <span class="logo-placeholder">Constructora<br>Cumbre El Sol</span>
+                </div>
+            </a>
+            <a href="https://expokai.cl" target="_blank" rel="noopener" class="client-logo-item">
+                <div class="client-logo-box">
+                    <!-- <img src="logos/expokai.png" alt="Expokai"> -->
+                    <span class="logo-placeholder">Expokai</span>
+                </div>
+            </a>
+            <a href="https://giovanniscleaningservice.com" target="_blank" rel="noopener" class="client-logo-item">
+                <div class="client-logo-box">
+                    <!-- <img src="logos/giovannis.png" alt="Giovanni's Cleaning Service"> -->
+                    <span class="logo-placeholder">Giovanni's<br>Cleaning Service</span>
+                </div>
+            </a>
+            <a href="https://reservika.cl" target="_blank" rel="noopener" class="client-logo-item">
+                <div class="client-logo-box">
+                    <!-- <img src="logos/reservika.png" alt="Reservika"> -->
+                    <span class="logo-placeholder">Reservika</span>
+                </div>
+            </a>
 
-    <!-- Hero -->
-    <section class="hero" id="inicio">
-        <div class="hero-bg-shapes">
-            <div class="shape shape-1"></div>
-            <div class="shape shape-2"></div>
-            <div class="shape shape-3"></div>
+            <!-- Duplicado para loop infinito -->
+            <a href="https://mediacionya.cl" target="_blank" rel="noopener" class="client-logo-item" aria-hidden="true">
+                <div class="client-logo-box"><span class="logo-placeholder">Mediación Ya</span></div>
+            </a>
+            <a href="https://constructoracumbreelsol.cl" target="_blank" rel="noopener" class="client-logo-item" aria-hidden="true">
+                <div class="client-logo-box"><span class="logo-placeholder">Constructora<br>Cumbre El Sol</span></div>
+            </a>
+            <a href="https://expokai.cl" target="_blank" rel="noopener" class="client-logo-item" aria-hidden="true">
+                <div class="client-logo-box"><span class="logo-placeholder">Expokai</span></div>
+            </a>
+            <a href="https://giovanniscleaningservice.com" target="_blank" rel="noopener" class="client-logo-item" aria-hidden="true">
+                <div class="client-logo-box"><span class="logo-placeholder">Giovanni's<br>Cleaning Service</span></div>
+            </a>
+            <a href="https://reservika.cl" target="_blank" rel="noopener" class="client-logo-item" aria-hidden="true">
+                <div class="client-logo-box"><span class="logo-placeholder">Reservika</span></div>
+            </a>
         </div>
-        <div class="container hero-content">
-            <img src="ISOTIPO WEBU.png" alt="WEBU" class="hero-isotipo">
-            <span class="hero-badge">Desarrollo Web en Chile</span>
-            <h1>Tu presencia digital<br><span class="gradient-text">comienza hoy</span></h1>
-            <p class="hero-slogan">La forma facil de estar en internet</p>
-            <p class="hero-subtitle">Creamos sitios web profesionales, rapidos y optimizados para que tu negocio destaque en internet. Desde landing pages hasta e-commerce completos.</p>
-            <div class="hero-actions">
-                <a href="#contacto" class="btn btn-primary btn-lg">Solicitar Propuesta Gratis</a>
-                <a href="#planes" class="btn btn-outline btn-lg">Ver Planes</a>
-            </div>
-            <div class="hero-stats">
-                <div class="stat">
-                    <span class="stat-number">100+</span>
-                    <span class="stat-label">Proyectos</span>
-                </div>
-                <div class="stat-divider"></div>
-                <div class="stat">
-                    <span class="stat-number">98%</span>
-                    <span class="stat-label">Satisfaccion</span>
-                </div>
-                <div class="stat-divider"></div>
-                <div class="stat">
-                    <span class="stat-number">48 hrs</span>
-                    <span class="stat-label">Entrega promedio</span>
-                </div>
-            </div>
-        </div>
-    </section>
+    </div>
+</section>
 
-    <!-- Servicios -->
-    <section class="section services" id="servicios">
-        <div class="container">
-            <span class="section-badge">Nuestros Servicios</span>
-            <h2 class="section-title">Todo lo que necesitas para<br><span class="gradient-text">crecer en internet</span></h2>
-            <div class="services-grid">
-                <div class="service-card">
-                    <div class="service-icon">
-                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
-                    </div>
-                    <h3>Diseno Responsivo</h3>
-                    <p>Tu sitio se vera perfecto en celulares, tablets y computadores. Adaptado a todas las pantallas.</p>
+<!-- ══ SERVICIOS ══ -->
+<section class="section services" id="servicios">
+    <div class="container">
+        <span class="section-badge">Nuestros Servicios</span>
+        <h2 class="section-title">Todo lo que necesitas para<br><span class="gradient-text">crecer en internet</span></h2>
+        <div class="services-grid">
+            <div class="service-card">
+                <div class="service-icon">
+                    <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
                 </div>
-                <div class="service-card">
-                    <div class="service-icon">
-                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
-                    </div>
-                    <h3>SEO Optimizado</h3>
-                    <p>Posicionamos tu web en Google para que tus clientes te encuentren facilmente.</p>
+                <h3>Diseno Responsivo</h3>
+                <p>Tu sitio se vera perfecto en celulares, tablets y computadores. Adaptado a todas las pantallas.</p>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">
+                    <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
                 </div>
-                <div class="service-card">
-                    <div class="service-icon">
-                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
-                    </div>
-                    <h3>Velocidad Maxima</h3>
-                    <p>Sitios ultrarapidos que cargan en menos de 2 segundos. Sin perder visitas por lentitud.</p>
+                <h3>SEO Optimizado</h3>
+                <p>Posicionamos tu web en Google para que tus clientes te encuentren facilmente.</p>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">
+                    <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
                 </div>
-                <div class="service-card">
-                    <div class="service-icon">
-                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="4" width="22" height="16" rx="2"/><line x1="1" y1="10" x2="23" y2="10"/></svg>
-                    </div>
-                    <h3>Pasarelas de Pago</h3>
-                    <p>Integracion con Webpay, Mercado Pago y mas para que vendas online sin complicaciones.</p>
+                <h3>Velocidad Maxima</h3>
+                <p>Sitios ultrarapidos que cargan en menos de 2 segundos. Sin perder visitas por lentitud.</p>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">
+                    <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="4" width="22" height="16" rx="2"/><line x1="1" y1="10" x2="23" y2="10"/></svg>
                 </div>
-                <div class="service-card">
-                    <div class="service-icon">
-                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-                    </div>
-                    <h3>SSL y Seguridad</h3>
-                    <p>Certificado SSL gratuito y proteccion avanzada para tu sitio y tus clientes.</p>
+                <h3>Pasarelas de Pago</h3>
+                <p>Integracion con Webpay, Mercado Pago y mas para que vendas online sin complicaciones.</p>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">
+                    <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
                 </div>
-                <div class="service-card">
-                    <div class="service-icon">
-                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
-                    </div>
-                    <h3>Soporte Continuo</h3>
-                    <p>Te acompanamos despues del lanzamiento con soporte tecnico y actualizaciones.</p>
+                <h3>SSL y Seguridad</h3>
+                <p>Certificado SSL gratuito y proteccion avanzada para tu sitio y tus clientes.</p>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">
+                    <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
                 </div>
+                <h3>Soporte Continuo</h3>
+                <p>Te acompanamos despues del lanzamiento con soporte tecnico y actualizaciones.</p>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
-    <!-- Planes -->
-    <section class="section plans" id="planes">
-        <div class="container">
-            <span class="section-badge">Planes y Precios</span>
-            <h2 class="section-title">El plan perfecto para<br><span class="gradient-text">tu negocio</span></h2>
-            <p class="section-subtitle">Sin costos ocultos. Precio final, todo incluido.</p>
-            <div class="plans-grid">
-                <!-- Plan 1 - Destacado -->
-                <div class="plan-card plan-featured">
-                    <div class="plan-badge">Mas Popular</div>
-                    <div class="plan-header">
-                        <span class="plan-name">Landing Page</span>
-                        <p class="plan-desc">Ideal para promocionar un producto o servicio especifico</p>
-                        <div class="plan-price">
-                            <span class="price-currency">$</span>
-                            <span class="price-amount">49.990</span>
+<!-- ══ PLANES ══ -->
+<section class="section plans" id="planes">
+    <div class="container">
+        <span class="section-badge">Planes y Precios</span>
+        <h2 class="section-title">El plan perfecto para<br><span class="gradient-text">tu negocio</span></h2>
+        <p class="section-subtitle">Sin costos ocultos. Precio final, todo incluido.</p>
+
+        <div class="plans-grid-2">
+
+            <!-- Plan 1 — Página Web -->
+            <div class="plan-card plan-featured">
+                <div class="plan-badge">Más Popular</div>
+                <div class="plan-header">
+                    <span class="plan-name">Página Web</span>
+                    <p class="plan-desc">Ideal para negocios que necesitan presencia profesional en internet</p>
+                    <div class="plan-price">
+                        <span class="price-currency">$</span>
+                        <span class="price-amount">49.990</span>
+                    </div>
+                    <span class="price-period">pago único</span>
+                </div>
+                <ul class="plan-features">
+                    <li>
+                        <svg class="check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
+                        Diseño 100% responsivo y personalizado
+                    </li>
+                    <li>
+                        <svg class="check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
+                        Formulario de contacto integrado
+                    </li>
+                    <li>
+                        <svg class="check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
+                        Optimización SEO incluida
+                    </li>
+                    <li>
+                        <svg class="check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
+                        Certificado SSL gratuito
+                    </li>
+                    <li>
+                        <svg class="check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
+                        Integración con redes sociales
+                    </li>
+                    <li>
+                        <svg class="check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
+                        Velocidad máxima y carga rápida
+                    </li>
+                    <li>
+                        <svg class="check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
+                        Entrega en 5 días hábiles
+                    </li>
+                </ul>
+                <a href="#contacto" class="btn btn-primary btn-plan">Comenzar Ahora</a>
+
+                <!-- Nota hosting -->
+                <div class="plan-hosting-note">
+                    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+                    <span>Incluye dominio + 1 mes de hosting. Desde el 2° mes: <strong>$3.000/mes</strong> o <strong>$30.000/año</strong>. <a href="#hosting-info">Ver detalle</a></span>
+                </div>
+            </div>
+
+            <!-- Plan 2 — Solución a Medida -->
+            <div class="plan-card plan-custom">
+                <div class="plan-badge-custom">Proyecto Especial</div>
+                <div class="plan-header">
+                    <span class="plan-name">Solución a Medida</span>
+                    <p class="plan-desc">Para proyectos que requieren funcionalidades avanzadas o desarrollos únicos</p>
+                    <p class="plan-price-custom">Precio según proyecto</p>
+                    <span class="price-period" style="color:#64748b;">cotización personalizada · sin compromiso</span>
+                </div>
+                <ul class="plan-features">
+                    <li>
+                        <svg class="check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
+                        E-commerce con pasarelas de pago
+                    </li>
+                    <li>
+                        <svg class="check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
+                        Plataformas web con login y usuarios
+                    </li>
+                    <li>
+                        <svg class="check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
+                        Sistemas de reservas o agendamiento
+                    </li>
+                    <li>
+                        <svg class="check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
+                        Integraciones con APIs externas
+                    </li>
+                    <li>
+                        <svg class="check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
+                        Panel de administración personalizado
+                    </li>
+                    <li>
+                        <svg class="check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
+                        Soporte y mantenimiento continuo
+                    </li>
+                    <li>
+                        <svg class="check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
+                        Asesoría técnica sin costo extra
+                    </li>
+                </ul>
+                <a href="https://wa.me/56937232049?text=Hola!%20Quiero%20cotizar%20una%20Soluci%C3%B3n%20a%20Medida" target="_blank" rel="noopener" class="btn-whatsapp-plan">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                    Cotizar por WhatsApp
+                </a>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- ══ HOSTING INFO ══ -->
+<section class="section hosting-section" id="hosting-info">
+    <div class="container">
+        <span class="section-badge">Dominio y Hosting</span>
+        <h2 class="section-title">Lo que incluye tu plan<br><span class="gradient-text">y qué pasa después</span></h2>
+        <p class="section-subtitle">Transparencia total. Sin letras chicas.</p>
+
+        <div class="hosting-grid">
+
+            <!-- Card: Qué incluye -->
+            <div class="hosting-card hosting-included">
+                <div class="hosting-card-icon">
+                    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                </div>
+                <h3>¿Qué incluye el precio de $49.990?</h3>
+                <p>El pago único cubre todo lo necesario para que tu sitio web esté en internet desde el primer día:</p>
+                <ul class="hosting-list">
+                    <li>
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#6366f1" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
+                        Desarrollo y diseño completo del sitio
+                    </li>
+                    <li>
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#6366f1" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
+                        Registro de dominio (ej: tunegocio.cl)
+                    </li>
+                    <li>
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#6366f1" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
+                        1 mes de hosting incluido
+                    </li>
+                    <li>
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#6366f1" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
+                        Certificado SSL (sitio seguro con https)
+                    </li>
+                    <li>
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#6366f1" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
+                        Configuración y publicación completa
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Card: Renovación hosting -->
+            <div class="hosting-card hosting-renewal">
+                <div class="hosting-card-icon hosting-card-icon--alt">
+                    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+                </div>
+                <h3>Renovación del hosting desde el 2° mes</h3>
+                <p>Una vez vencido el mes incluido, puedes elegir el plan de mantención que más te acomode:</p>
+                <div class="hosting-pricing-options">
+                    <div class="hosting-option">
+                        <span class="hosting-option-label">Mensual</span>
+                        <div class="hosting-option-price">
+                            <span class="h-currency">$</span>
+                            <span class="h-amount">3.000</span>
                         </div>
-                        <span class="price-period">pago unico</span>
+                        <span class="hosting-option-period">por mes</span>
                     </div>
-                    <ul class="plan-features">
+                    <div class="hosting-option-divider">ó</div>
+                    <div class="hosting-option hosting-option--highlight">
+                        <span class="hosting-option-badge">Ahorra $6.000</span>
+                        <span class="hosting-option-label">Anual</span>
+                        <div class="hosting-option-price">
+                            <span class="h-currency">$</span>
+                            <span class="h-amount">30.000</span>
+                        </div>
+                        <span class="hosting-option-period">al año · equivale a $2.500/mes</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card: Cambios menores -->
+            <div class="hosting-card hosting-changes">
+                <div class="hosting-card-icon hosting-card-icon--green">
+                    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/></svg>
+                </div>
+                <h3>¿Puedo hacer cambios después de la entrega?</h3>
+                <p>Sí. Siempre que tu hosting esté activo con nosotros, puedes solicitar cambios menores en tu sitio sin costo adicional.</p>
+                <div class="hosting-changes-detail">
+                    <p class="changes-title">¿Qué se considera un cambio menor?</p>
+                    <ul class="hosting-list">
                         <li>
-                            <svg class="check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
-                            Pagina de aterrizaje profesional
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
+                            Actualizar textos o información
                         </li>
                         <li>
-                            <svg class="check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
-                            Diseno 100% responsivo
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
+                            Cambiar imágenes o fotos
                         </li>
                         <li>
-                            <svg class="check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
-                            Formulario de contacto
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
+                            Actualizar precios o servicios
                         </li>
                         <li>
-                            <svg class="check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
-                            Optimizacion SEO basica
-                        </li>
-                        <li>
-                            <svg class="check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
-                            Certificado SSL incluido
-                        </li>
-                        <li>
-                            <svg class="check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
-                            Entrega en 5 dias habiles
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
+                            Ajustes de colores o tipografías
                         </li>
                     </ul>
-                    <a href="#contacto" class="btn btn-primary btn-plan">Comenzar Ahora</a>
+                    <p class="changes-note">Cambios estructurales o nuevas secciones se cotizan por separado.</p>
                 </div>
+            </div>
 
-                <!-- Plan 2 -->
-                <div class="plan-card">
-                    <div class="plan-header">
-                        <span class="plan-name">Sitio Web</span>
-                        <p class="plan-desc">Para negocios que necesitan presencia web completa</p>
-                        <div class="plan-price">
-                            <span class="price-currency">$</span>
-                            <span class="price-amount">99.990</span>
-                        </div>
-                        <span class="price-period">pago unico</span>
-                    </div>
-                    <ul class="plan-features">
-                        <li>
-                            <svg class="check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
-                            Hasta 5 paginas completas
-                        </li>
-                        <li>
-                            <svg class="check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
-                            Diseno personalizado premium
-                        </li>
-                        <li>
-                            <svg class="check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
-                            Formulario de contacto avanzado
-                        </li>
-                        <li>
-                            <svg class="check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
-                            Integracion redes sociales
-                        </li>
-                        <li>
-                            <svg class="check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
-                            SEO avanzado + Google Analytics
-                        </li>
-                        <li>
-                            <svg class="check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
-                            Hosting + dominio .cl por 1 ano
-                        </li>
-                        <li>
-                            <svg class="check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
-                            Entrega en 10 dias habiles
-                        </li>
-                    </ul>
-                    <a href="#contacto" class="btn btn-plan">Comenzar Ahora</a>
-                </div>
+        </div>
+    </div>
+</section>
 
-                <!-- Plan 3 - PRECIO ACTUALIZADO -->
-                <div class="plan-card">
-                    <div class="plan-header">
-                        <span class="plan-name">E-Commerce</span>
-                        <p class="plan-desc">Tienda online completa con pasarelas de pago integradas</p>
-                        <div class="plan-price">
-                            <span class="price-currency">$</span>
-                            <span class="price-amount">199.990</span>
-                        </div>
-                        <span class="price-period">pago unico</span>
+<!-- ══ PROCESO — 4 PASOS ══ -->
+<section class="section process" id="proceso">
+    <div class="container">
+        <span class="section-badge">Como Funciona</span>
+        <h2 class="section-title">Tu sitio web listo<br><span class="gradient-text">en 4 simples pasos</span></h2>
+        <div class="process-timeline">
+            <div class="timeline-line"></div>
+
+            <!-- Paso 1 -->
+            <div class="process-step-v2">
+                <div class="step-icon-wrap">
+                    <div class="step-icon">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
                     </div>
-                    <ul class="plan-features">
-                        <li>
-                            <svg class="check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
-                            Tienda online completa
-                        </li>
-                        <li>
-                            <svg class="check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
-                            Integracion Webpay / Mercado Pago
-                        </li>
-                        <li>
-                            <svg class="check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
-                            Conexion con Mercado Libre
-                        </li>
-                        <li>
-                            <svg class="check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
-                            Panel de administracion
-                        </li>
-                        <li>
-                            <svg class="check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
-                            Gestion de inventario
-                        </li>
-                        <li>
-                            <svg class="check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
-                            Carrito de compras optimizado
-                        </li>
-                        <li>
-                            <svg class="check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
-                            SEO + Google Analytics
-                        </li>
-                        <li>
-                            <svg class="check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
-                            Soporte por 3 meses
-                        </li>
-                    </ul>
-                    <a href="#contacto" class="btn btn-plan">Comenzar Ahora</a>
+                    <span class="step-num">1</span>
                 </div>
+                <div class="step-content">
+                    <h3>Llena el formulario o agenda una reunión</h3>
+                    <p>Cuéntanos sobre tu proyecto completando nuestro formulario en línea, o agenda directamente una videollamada con nuestro equipo. Sin burocracia, sin esperas.</p>
+                </div>
+            </div>
+
+            <!-- Paso 2 -->
+            <div class="process-step-v2">
+                <div class="step-icon-wrap">
+                    <div class="step-icon">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+                    </div>
+                    <span class="step-num">2</span>
+                </div>
+                <div class="step-content">
+                    <h3>Recibes tu propuesta web en menos de 24 horas</h3>
+                    <p>Analizamos tu negocio y en menos de 24 horas te enviamos una propuesta inicial con el diseño, estructura y presupuesto de tu sitio. Rápido, claro y sin compromisos.</p>
+                </div>
+            </div>
+
+            <!-- Paso 3 -->
+            <div class="process-step-v2">
+                <div class="step-icon-wrap">
+                    <div class="step-icon">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M22 17a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V9.5C2 7 4 5 6.5 5H18c2.2 0 4 1.8 4 4v8z"/>
+                            <polyline points="15,9 18,9 18,11"/>
+                            <path d="M6.5 5C4 5 2 7 2 9.5"/>
+                            <line x1="6" y1="10" x2="7" y2="10"/>
+                        </svg>
+                    </div>
+                    <span class="step-num">3</span>
+                </div>
+                <div class="step-content">
+                    <h3>Te compartimos un Drive con todos los avances</h3>
+                    <p>Accedes a una carpeta compartida donde verás el progreso en tiempo real, podrás dejar tus comentarios, solicitar cambios y aprobar cada detalle antes de la entrega final.</p>
+                </div>
+            </div>
+
+            <!-- Paso 4 -->
+            <div class="process-step-v2">
+                <div class="step-icon-wrap">
+                    <div class="step-icon">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                    </div>
+                    <span class="step-num">4</span>
+                </div>
+                <div class="step-content">
+                    <h3>Recibes tu web final, lista para publicar</h3>
+                    <p>Una vez que das tu aprobación, publicamos tu sitio web y te entregamos todo funcionando: dominio, hosting y accesos. Tu negocio en internet, listo para recibir clientes.</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- ══ CTA ══ -->
+<section class="section cta-section">
+    <div class="container">
+        <div class="cta-box">
+            <img src="ISOTIPO WEBU.png" alt="WEBU" class="cta-isotipo">
+            <h2>Tu propuesta lista en 24 horas</h2>
+            <p>Completa el formulario y recibe tu propuesta inicial. Sin pagos, sin tarjeta, completamente gratis.</p>
+            <a href="#contacto" class="btn btn-primary btn-lg">Solicitar Propuesta Gratis</a>
+        </div>
+    </div>
+</section>
+
+<!-- ══ CONTACTO ══ -->
+<section class="section contact" id="contacto">
+    <div class="container">
+        <div class="contact-grid-3">
+            <div class="contact-info">
+                <span class="section-badge">Contacto</span>
+                <h2 class="section-title">Hablemos de<br><span class="gradient-text">tu proyecto</span></h2>
+                <p>Escribenos y te responderemos en menos de 24 horas. Tambien puedes contactarnos directamente por WhatsApp o agendar una llamada.</p>
+                <div class="contact-methods">
+                    <div class="contact-method">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                        <span>contacto@webu.cl</span>
+                    </div>
+                    <div class="contact-method">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                        <span>+56 9 3723 2049</span>
+                    </div>
+                    <div class="contact-method">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                        <span>Santiago, Chile</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card Agendar Llamada -->
+            <div class="schedule-cta-box">
+                <div class="schedule-cta-icon">
+                    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+                </div>
+                <h3>Agenda una llamada gratis</h3>
+                <p>Reserva 30 minutos con nuestro equipo y te asesoramos sin compromiso sobre tu proyecto web.</p>
+                <a href="https://calendar.app.google/Led3S6xGT3TRJF4u6" target="_blank" rel="noopener" class="btn-schedule-white">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+                    Agendar Llamada Gratis
+                </a>
+            </div>
+
+            <!-- Card Propuesta -->
+            <div class="contact-cta-box">
+                <div class="contact-cta-icon">
+                    <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+                </div>
+                <h3>Recibe tu propuesta en 24 horas</h3>
+                <p>Cuentanos sobre tu proyecto en un formulario rapido y en menos de 24 horas tendras tu propuesta inicial lista.</p>
+                <div class="contact-guarantees">
+                    <span class="guarantee">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
+                        Sin pagos
+                    </span>
+                    <span class="guarantee">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
+                        Sin tarjeta
+                    </span>
+                    <span class="guarantee">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
+                        100% gratis
+                    </span>
+                </div>
+                <a href="https://docs.google.com/forms/d/e/1FAIpQLSfM1DIrXPOyOQnKZnDBbfmxqXXyQ35S_k8rYIHdU3G0L9n7CA/viewform" target="_blank" rel="noopener" class="btn btn-primary btn-lg btn-full">Solicitar Propuesta Gratis</a>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
-    <!-- Como Funciona -->
-    <section class="section process" id="proceso">
-        <div class="container">
-            <span class="section-badge">Como Funciona</span>
-            <h2 class="section-title">Tu sitio web listo<br><span class="gradient-text">en 5 simples pasos</span></h2>
-            <div class="process-timeline">
-                <div class="timeline-line"></div>
-                <div class="process-step-v2">
-                    <div class="step-icon-wrap">
-                        <div class="step-icon">
-                            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="4" width="22" height="16" rx="2"/><line x1="1" y1="10" x2="23" y2="10"/></svg>
-                        </div>
-                        <span class="step-num">1</span>
-                    </div>
-                    <div class="step-content">
-                        <h3>Contrata tu plan</h3>
-                        <p>Elige el plan que mejor se adapte a tu negocio y realiza el pago de forma segura.</p>
-                    </div>
-                </div>
-                <div class="process-step-v2">
-                    <div class="step-icon-wrap">
-                        <div class="step-icon">
-                            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
-                        </div>
-                        <span class="step-num">2</span>
-                    </div>
-                    <div class="step-content">
-                        <h3>Explicanos tu idea</h3>
-                        <p>Cuentanos que necesitas: tu marca, colores, contenido y referencias. Nosotros nos encargamos del resto.</p>
-                    </div>
-                </div>
-                <div class="process-step-v2">
-                    <div class="step-icon-wrap">
-                        <div class="step-icon">
-                            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
-                        </div>
-                        <span class="step-num">3</span>
-                    </div>
-                    <div class="step-content">
-                        <h3>Prototipo en 24 horas</h3>
-                        <p>Te enviamos una primera version de tu sitio web en menos de 24 horas para que la revises.</p>
-                    </div>
-                </div>
-                <div class="process-step-v2">
-                    <div class="step-icon-wrap">
-                        <div class="step-icon">
-                            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/></svg>
-                        </div>
-                        <span class="step-num">4</span>
-                    </div>
-                    <div class="step-content">
-                        <h3>5 dias para tus cambios</h3>
-                        <p>Tienes 5 dias para revisar el prototipo y enviarnos todos los ajustes que necesites. Sin limite de correcciones.</p>
-                    </div>
-                </div>
-                <div class="process-step-v2">
-                    <div class="step-icon-wrap">
-                        <div class="step-icon">
-                            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
-                        </div>
-                        <span class="step-num">5</span>
-                    </div>
-                    <div class="step-content">
-                        <h3>Recibes el producto final</h3>
-                        <p>Aplicamos tus cambios, publicamos tu sitio y te entregamos todo listo para funcionar.</p>
-                    </div>
-                </div>
+<!-- ══ FOOTER ══ -->
+<footer class="footer">
+    <div class="container">
+        <div class="footer-content">
+            <div class="footer-brand">
+                <a href="#" class="logo footer-logo">
+                    <img src="ISOTIPO WEBU.png" alt="WEBU Isotipo" class="logo-isotipo">
+                    <img src="LOGOTIPO WEBU.png" alt="WEBU" class="logo-text">
+                </a>
+                <p class="footer-slogan">La forma facil de estar en internet</p>
+                <p>Desarrollo web profesional en Chile. Creamos sitios que impulsan tu negocio.</p>
+            </div>
+            <div class="footer-links">
+                <h4>Navegacion</h4>
+                <ul>
+                    <li><a href="#inicio">Inicio</a></li>
+                    <li><a href="#servicios">Servicios</a></li>
+                    <li><a href="#planes">Planes</a></li>
+                    <li><a href="#contacto">Contacto</a></li>
+                </ul>
+            </div>
+            <div class="footer-links">
+                <h4>Planes</h4>
+                <ul>
+                    <li><a href="#planes">Página Web</a></li>
+                    <li><a href="#planes">Solución a Medida</a></li>
+                </ul>
             </div>
         </div>
-    </section>
-
-    <!-- CTA -->
-    <section class="section cta-section">
-        <div class="container">
-            <div class="cta-box">
-                <img src="ISOTIPO WEBU.png" alt="WEBU" class="cta-isotipo">
-                <h2>Tu propuesta lista en 24 horas</h2>
-                <p>Completa el formulario y recibe tu propuesta inicial. Sin pagos, sin tarjeta, completamente gratis.</p>
-                <a href="#contacto" class="btn btn-primary btn-lg">Solicitar Propuesta Gratis</a>
-            </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 WEBU.cl - Todos los derechos reservados</p>
         </div>
-    </section>
+    </div>
+</footer>
 
-    <!-- Contacto -->
-    <section class="section contact" id="contacto">
-        <div class="container">
-            <div class="contact-grid-3">
-                <div class="contact-info">
-                    <span class="section-badge">Contacto</span>
-                    <h2 class="section-title">Hablemos de<br><span class="gradient-text">tu proyecto</span></h2>
-                    <p>Escribenos y te responderemos en menos de 24 horas. Tambien puedes contactarnos directamente por WhatsApp o agendar una llamada.</p>
-                    <div class="contact-methods">
-                        <div class="contact-method">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-                            <span>contacto@webu.cl</span>
-                        </div>
-                        <div class="contact-method">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-                            <span>+56 9 2685 9838</span>
-                        </div>
-                        <div class="contact-method">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-                            <span>Santiago, Chile</span>
-                        </div>
-                    </div>
-                </div>
+<!-- ══ WHATSAPP FLOAT ══ -->
+<a href="https://wa.me/56937232049?text=Hola!%20Me%20interesa%20un%20sitio%20web" class="whatsapp-float" target="_blank" rel="noopener" aria-label="Contactar por WhatsApp">
+    <svg width="28" height="28" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+</a>
 
-                <!-- NUEVO: Card Agendar Llamada -->
-                <div class="schedule-cta-box">
-                    <div class="schedule-cta-icon">
-                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/><line x1="8" y1="14" x2="8" y2="14" stroke-width="3" stroke-linecap="round"/><line x1="12" y1="14" x2="12" y2="14" stroke-width="3" stroke-linecap="round"/><line x1="16" y1="14" x2="16" y2="14" stroke-width="3" stroke-linecap="round"/></svg>
-                    </div>
-                    <h3>Agenda una llamada gratis</h3>
-                    <p>Reserva 30 minutos con nuestro equipo y te asesoramos sin compromiso sobre tu proyecto web.</p>
-                    <a href="https://calendar.app.google/Led3S6xGT3TRJF4u6" target="_blank" rel="noopener" class="btn-schedule-white">
-                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
-                        Agendar Llamada Gratis
-                    </a>
-                </div>
+<script src="script.js"></script>
+```
 
-                <div class="contact-cta-box">
-                    <div class="contact-cta-icon">
-                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
-                    </div>
-                    <h3>Recibe tu propuesta en 24 horas</h3>
-                    <p>Cuentanos sobre tu proyecto en un formulario rapido y en menos de 24 horas tendras tu propuesta inicial lista.</p>
-                    <div class="contact-guarantees">
-                        <span class="guarantee">
-                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
-                            Sin pagos
-                        </span>
-                        <span class="guarantee">
-                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
-                            Sin tarjeta
-                        </span>
-                        <span class="guarantee">
-                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
-                            100% gratis
-                        </span>
-                    </div>
-                    <a href="https://docs.google.com/forms/d/e/1FAIpQLSfM1DIrXPOyOQnKZnDBbfmxqXXyQ35S_k8rYIHdU3G0L9n7CA/viewform" target="_blank" rel="noopener" class="btn btn-primary btn-lg btn-full">Solicitar Propuesta Gratis</a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-brand">
-                    <a href="#" class="logo footer-logo">
-                        <img src="ISOTIPO WEBU.png" alt="WEBU Isotipo" class="logo-isotipo">
-                        <img src="LOGOTIPO WEBU.png" alt="WEBU" class="logo-text">
-                    </a>
-                    <p class="footer-slogan">La forma facil de estar en internet</p>
-                    <p>Desarrollo web profesional en Chile. Creamos sitios que impulsan tu negocio.</p>
-                </div>
-                <div class="footer-links">
-                    <h4>Navegacion</h4>
-                    <ul>
-                        <li><a href="#inicio">Inicio</a></li>
-                        <li><a href="#servicios">Servicios</a></li>
-                        <li><a href="#planes">Planes</a></li>
-                        <li><a href="#contacto">Contacto</a></li>
-                    </ul>
-                </div>
-                <div class="footer-links">
-                    <h4>Planes</h4>
-                    <ul>
-                        <li><a href="#planes">Landing Page</a></li>
-                        <li><a href="#planes">Sitio Web</a></li>
-                        <li><a href="#planes">E-Commerce</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2026 WEBU.cl - Todos los derechos reservados</p>
-            </div>
-        </div>
-    </footer>
-
-    <!-- WhatsApp Float -->
-    <a href="https://wa.me/56926859838?text=Hola!%20Me%20interesa%20un%20sitio%20web" class="whatsapp-float" target="_blank" rel="noopener" aria-label="Contactar por WhatsApp">
-        <svg width="28" height="28" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-    </a>
-
-    <script src="script.js"></script>
 </body>
 </html>
